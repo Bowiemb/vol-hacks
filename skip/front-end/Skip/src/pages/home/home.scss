@@ -1,11 +1,28 @@
 page-home {
 
   ion-content {
-    background-image: url("../assets/imgs/background.jpg");
-    background-size:     cover;                      /* <------ */
+    background-image: url("../assets/imgs/background.png");
+    background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
   }
+
+  .skip-title {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     height: 20%;
+     width: 15%;
+ }
+
+ .skip-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10%;
+    width: 10%;
+}
+
   .overlay {
     z-index: 1;
     height: 100%;
@@ -14,13 +31,13 @@ page-home {
     overflow: auto;
     top: 0px;
     left: 0px;
-    background: rgba(0, 0, 0, 0.6); 
 }
 
   .app-title {
     font-size:1.8em;
     font-weight: bold;
     text-align: center;
+    color: #fff;
   }
 
   .userInfo {
