@@ -14,24 +14,27 @@ export class SkipperPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SkipperPage');
   }
-
+  
   addOne(id) {
-    let button = document.getElementById(id);
-    let val = +button.value;
+    console.log(id);
+    let button = (<HTMLInputElement>document.getElementById(id));
+    console.log(button);
+    
+    let val = Number(button.value);
     val += 1;
     console.log(val);
-    button.value = val;
-    button.innerHTML = val;
-  }
+    button.value = String(val);
+    button.innerHTML = String(val);
+   }
 
   removeOne(id) {
-    if (+document.getElementById(id).value > 0) {
-      let button = document.getElementById(id);
-      let val = +button.value;
+    if (Number((<HTMLInputElement>document.getElementById(id)).value) > 0) {
+      let button = (<HTMLInputElement>document.getElementById(id));
+      let val = Number(button.value);
       val -= 1;
       console.log(val);
-      button.value = val;
-      button.innerHTML = val;
+      button.value = String(val);
+      button.innerHTML = String(val);
     }
   }
 }
