@@ -21,13 +21,13 @@
 <h3>Waiters</h3>
 <a href="/books/add" class="btn btn-success btn-sm">
   <i class="glyphicon glyphicon-plus"></i>
-  Add book
+  Add Waiter
 </a>
 
 {% for book in books %}
 <div class="media">
 
-  <a href="/books/{{book.id}}">
+  <a href="/books/{{book.lname}}">
 <!--
       <div class="media-left">
       {% if book.imageUrl %}
@@ -38,7 +38,6 @@
     </div>
 -->
     <div class="media-body">
-      <h4>Hello</h4>
       <h4>{{ book.fname }}</h4>
       <p>{{ book.lname }}</p>
     </div>
