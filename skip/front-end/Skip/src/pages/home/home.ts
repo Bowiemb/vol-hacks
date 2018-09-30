@@ -27,8 +27,8 @@ export class HomePage {
         })
       };
 
-      // let first = document.getElementById('first').value;
-      // let last = document.getElementById('last').value;
+      let first = document.getElementById('first').value;
+      let last = document.getElementById('last').value;
 
       console.log(this.first);
       console.log(this.last);
