@@ -25675,11 +25675,26 @@ ion-navbar.toolbar {
 }
 
 page-home ion-content {
-  background-image: url("../assets/imgs/background.jpg");
+  background-image: url("../assets/imgs/background.png");
   background-size: cover;
-  /* <------ */
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+page-home .skip-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20%;
+  width: 15%;
+}
+
+page-home .skip-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  width: 10%;
 }
 
 page-home .overlay {
@@ -25690,13 +25705,6 @@ page-home .overlay {
   overflow: auto;
   top: 0px;
   left: 0px;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-page-home .app-title {
-  font-size: 1.8em;
-  font-weight: bold;
-  text-align: center;
 }
 
 page-home .userInfo {
@@ -25754,6 +25762,10 @@ page-skipper .waiters {
   /* change margins when in app */
 }
 
+page-skipper .num-waiters {
+  font-size: 1.1em;
+}
+
 page-skipper .restaurantDiv {
   width: 100%;
   height: 80%;
@@ -25800,4 +25812,31 @@ page-skipper .item3 {
 
 page-skipper a[disabled], page-skipper button[disabled], page-skipper [ion-button][disabled] {
   opacity: 1;
+}
+
+page-waiter ion-content {
+  background-image: url("../assets/imgs/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+page-waiter ion-title {
+  text-align: center;
+}
+
+page-waiter .waiter-subtitle {
+  text-align: left;
+  font-size: 1.3em;
+  color: #fff;
+  margin-left: 30%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+page-waiter .restaurant-list {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }

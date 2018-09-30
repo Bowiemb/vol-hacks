@@ -10,11 +10,11 @@
 <div class="overlay">
   <ion-list class="userInfo">
     <ion-item>
-      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-input [(ngModel)]="first" type="text" placeholder="First Name"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <ion-input [(ngModel)]="last" type="text" placeholder="Last Name"></ion-input>
     </ion-item>
 
   </ion-list>
@@ -24,5 +24,3 @@
     <button ion-button (click)='pushWaiterPage()' class="waitButton">Waiter</button>
   </div>
 </div>
-
-</ion-content>
