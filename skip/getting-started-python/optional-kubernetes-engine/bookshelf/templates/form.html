@@ -22,20 +22,20 @@
 <form method="POST" enctype="multipart/form-data">
 
   <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" value="{{book.title}}" class="form-control"/>
+    <label for="title">First Name</label>
+    <input type="text" name="title" id="fname" value="{{book.fname}}" class="form-control"/>
   </div>
 
   <div class="form-group">
-    <label for="author">Author</label>
-    <input type="text" name="author" id="author" value="{{book.author}}" class="form-control"/>
+    <label for="author">Last Name</label>
+    <input type="text" name="author" id="lname" value="{{book.lname}}" class="form-control"/>
   </div>
 
   <div class="form-group">
-    <label for="publishedDate">Date Published</label>
-    <input type="text" name="publishedDate" id="publishedDate" value="{{book.publishedDate}}" class="form-control"/>
+    <label for="publishedDate">Time</label>
+    <input type="text" name="publishedDate" id="time" value="{{book.time}}" class="form-control"/>
   </div>
-
+<!--
   <div class="form-group">
     <label for="description">Description</label>
     <textarea name="description" id="description" class="form-control">{{book.description}}</textarea>
@@ -60,7 +60,7 @@
     <label for="createdById">Created by ID</label>
     <input type="text" name="createdById" id="createdById" value="{{book.createdById}}" class="form-control"/>
   </div>
-
+-->
   <button type="submit" class="btn btn-success">Save</button>
 </form>
 
