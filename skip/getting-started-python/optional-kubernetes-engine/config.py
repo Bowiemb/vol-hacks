@@ -21,7 +21,9 @@ You can create and manage projects at https://console.developers.google.com
 import os
 
 # The secret key is used by Flask to encrypt session cookies.
-SECRET_KEY = 'secret'
+# [START secret_key]
+SECRET_KEY = 'V\xd3\x97\x12\xffN\xc0\xbb\x935w\xe4\x95\x80\xe7A\x9e\x97\xf0\x15\x9f\x19\xc9\xcd'
+# [END secret_key]
 
 # There are three different ways to store the data in the application.
 # You can choose 'datastore', 'cloudsql', or 'mongodb'. Be sure to
@@ -32,7 +34,7 @@ DATA_BACKEND = 'datastore'
 
 # Google Cloud Project ID. This can be found on the 'Overview' page at
 # https://console.developers.google.com
-PROJECT_ID = 'your-project-id'
+PROJECT_ID = 'skip-01'
 
 # CloudSQL & SQLAlchemy configuration
 # Replace the following values the respective values of your Cloud SQL
@@ -50,9 +52,12 @@ CLOUDSQL_CONNECTION_NAME = 'your-cloudsql-connection-name'
 #
 #   $ cloud_sql_proxy -instances=your-connection-name=tcp:3306
 #
+# Port 3306 is the standard MySQL port. If you need to use a different port,
+# change the 3306 to a different port number.
+
 # Alternatively, you could use a local MySQL instance for testing.
 LOCAL_SQLALCHEMY_DATABASE_URI = (
-    'mysql+pymysql://{user}:{password}@localhost/{database}').format(
+    'mysql+pymysql://{user}:{password}@127.0.0.1:3306/{database}').format(
         user=CLOUDSQL_USER, password=CLOUDSQL_PASSWORD,
         database=CLOUDSQL_DATABASE)
 
@@ -87,7 +92,7 @@ MONGO_URI = 'mongodb://user:password@host:27017/database'
 #
 # You can adjust the max content length and allow extensions settings to allow
 # larger or more varied file types if desired.
-CLOUD_STORAGE_BUCKET = 'your-project-id'
+CLOUD_STORAGE_BUCKET = 'skip-bucket'
 MAX_CONTENT_LENGTH = 8 * 1024 * 1024
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
@@ -103,5 +108,5 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 # If you receive a invalid redirect URI error review you settings to ensure
 # that the current URI is allowed.
 GOOGLE_OAUTH2_CLIENT_ID = \
-    'your-client-id'
-GOOGLE_OAUTH2_CLIENT_SECRET = 'your-client-secret'
+    '777724163941-fll38ilr8jcq9d5u30l7gemgslbm8c1e.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET = 'JYci0vgoSuXJ1NfJ8joroltH'

@@ -49,7 +49,7 @@ def from_datastore(entity):
 def list(limit=10, cursor=None):
     ds = get_client()
 
-    query = ds.query(kind='Book', order=['title'])
+    query = ds.query(kind='Waiter', order=['Time'])
     query_iterator = query.fetch(limit=limit, start_cursor=cursor)
     page = next(query_iterator.pages)
 
@@ -93,7 +93,7 @@ def update(data, id=None):
     if id:
         key = ds.key('Book', int(id))
     else:
-        key = ds.key('Book')
+        key = ds.key('Waiter')
 
     entity = datastore.Entity(
         key=key,
