@@ -47,7 +47,11 @@ def list():
         token = token.encode('utf-8')
 
     books, next_page_token = get_model().list(cursor=token)
+   
 
+   
+    
+    
     return render_template(
         "list.html",
         books=books,
