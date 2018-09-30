@@ -28,7 +28,7 @@ var WaiterPage = /** @class */ (function () {
     };
     WaiterPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-waiter',template:/*ion-inline-start:"/Users/shan/Desktop/Coding/Skip/src/pages/waiter/waiter.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Waiter</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/shan/Desktop/Coding/Skip/src/pages/waiter/waiter.html"*/,
+            selector: 'page-waiter',template:/*ion-inline-start:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/pages/waiter/waiter.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Waiter</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/pages/waiter/waiter.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], WaiterPage);
@@ -119,7 +119,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/shan/Desktop/Coding/Skip/src/pages/home/home.html"*/'<ion-title>\n  <div class="app-title">Skip</div>\n</ion-title>\n\n\n<ion-content padding>\n<div class="overlay">\n  <ion-list class="userInfo">\n    <ion-item>\n      <ion-input type="text" placeholder="First Name"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-input type="text" placeholder="Last Name"></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div class="submitButtons">\n    <button ion-button (click)=\'pushSkipperPage()\' class="skipButton" >Skipper</button>\n    <button ion-button (click)=\'pushWaiterPage()\' class="waitButton">Waiter</button>\n  </div>\n</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/shan/Desktop/Coding/Skip/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/pages/home/home.html"*/'<ion-title>\n  <div class="app-title">Skip</div>\n</ion-title>\n\n\n<ion-content padding>\n<div class="overlay">\n  <ion-list class="userInfo">\n    <ion-item>\n      <ion-input type="text" placeholder="First Name"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-input type="text" placeholder="Last Name"></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div class="submitButtons">\n    <button ion-button (click)=\'pushSkipperPage()\' class="skipButton" >Skipper</button>\n    <button ion-button (click)=\'pushWaiterPage()\' class="waitButton">Waiter</button>\n  </div>\n</div>\n\n</ion-content>\n'/*ion-inline-end:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
@@ -249,7 +249,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/shan/Desktop/Coding/Skip/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/shan/Desktop/Coding/Skip/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -287,31 +287,32 @@ var SkipperPage = /** @class */ (function () {
         console.log('ionViewDidLoad SkipperPage');
     };
     SkipperPage.prototype.addOne = function (id) {
+        console.log(id);
         var button = document.getElementById(id);
-        var val = +button.value;
+        console.log(button);
+        var val = Number(button.value);
         val += 1;
         console.log(val);
-        button.value = val;
-        button.innerHTML = val;
+        button.value = String(val);
+        button.innerHTML = String(val);
     };
     SkipperPage.prototype.removeOne = function (id) {
-        if (+document.getElementById(id).value > 0) {
+        if (Number(document.getElementById(id).value) > 0) {
             var button = document.getElementById(id);
-            var val = +button.value;
+            var val = Number(button.value);
             val -= 1;
             console.log(val);
-            button.value = val;
-            button.innerHTML = val;
+            button.value = String(val);
+            button.innerHTML = String(val);
         }
     };
     SkipperPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-skipper',template:/*ion-inline-start:"/Users/shan/Desktop/Coding/Skip/src/pages/skipper/skipper.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Skipping the line?</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <div class="info">\n    <p class="restaurant"> Chic-Fil-A </p>\n    <p class="waiters"> 2 Waiters </p>\n  </div>\n\n  <ion-card class="restaurantDiv">\n    <img class="restaurantImg" src="assets/imgs/ChicFilA.png"/>\n  </ion-card>\n\n\n  <hr>\n\n  <div class="itemsContainer">\n    <div class="item1">\n      <button id="removeQuantity" (click)="removeOne(\'quantity\')"> <ion-icon name="remove-circle"></ion-icon> </button>\n      <button id="quantity" ion-button color="light" disabled> 0 </button>\n      <button id="addQuantity" (click)="addOne(\'quantity\')"> <ion-icon name="add-circle"></ion-icon> </button>\n    </div>\n\n    <div class="item2"> <h3>Chicken Biscuit</h3> </div>\n    <div class="item3"> <h3>$2.19</h3> </div>\n  </div>\n\n  <hr>\n\n  <div class="itemsContainer">\n    <div class="item1">\n      <button (click)="removeOne(\'quantity1\')"> <ion-icon name="remove-circle"></ion-icon> </button>\n      <button id="quantity1" ion-button color="light" disabled> 0 </button>\n      <button (click)="addOne(\'quantity1\')"> <ion-icon name="add-circle"></ion-icon> </button>\n    </div>\n\n    <div class="item2"> <h3>Chicken Sandwich</h3> </div>\n    <div class="item3"> <h3>$3.05</h3> </div>\n  </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <div class="itemsContainer">\n      <ion-title class="item1">Total:</ion-title>\n      <h2 class="item2"> $0.00 </h2>\n      <button ion-button color="secondary" class="item3"> Continue! </button>\n    </div>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/shan/Desktop/Coding/Skip/src/pages/skipper/skipper.html"*/,
+            selector: 'page-skipper',template:/*ion-inline-start:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/pages/skipper/skipper.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Skipping the line?</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <div class="info">\n    <p class="restaurant"> Chic-Fil-A </p>\n    <p class="waiters"> 2 Waiters </p>\n  </div>\n\n  <ion-card class="restaurantDiv">\n    <img class="restaurantImg" src="assets/imgs/ChicFilA.png"/>\n  </ion-card>\n\n\n  <hr>\n\n  <div class="itemsContainer">\n    <div class="item1">\n      <button id="removeQuantity" (click)="removeOne(\'quantity\')"> <ion-icon name="remove-circle"></ion-icon> </button>\n      <button id="quantity" ion-button color="light" disabled> 0 </button>\n      <button id="addQuantity" (click)="addOne(\'quantity\')"> <ion-icon name="add-circle"></ion-icon> </button>\n    </div>\n\n    <div class="item2"> <h3>Chicken Biscuit</h3> </div>\n    <div class="item3"> <h3>$2.19</h3> </div>\n  </div>\n\n  <hr>\n\n  <div class="itemsContainer">\n    <div class="item1">\n      <button (click)="removeOne(\'quantity1\')"> <ion-icon name="remove-circle"></ion-icon> </button>\n      <button id="quantity1" ion-button color="light" disabled> 0 </button>\n      <button (click)="addOne(\'quantity1\')"> <ion-icon name="add-circle"></ion-icon> </button>\n    </div>\n\n    <div class="item2"> <h3>Chicken Sandwich</h3> </div>\n    <div class="item3"> <h3>$3.05</h3> </div>\n  </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <div class="itemsContainer">\n      <ion-title class="item1">Total:</ion-title>\n      <h2 class="item2"> $0.00 </h2>\n      <button ion-button color="secondary" class="item3"> Continue! </button>\n    </div>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/home/mb_bowie16/vol-hacks/skip/front-end/Skip/src/pages/skipper/skipper.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], SkipperPage);
     return SkipperPage;
-    var _a, _b;
 }());
 
 //# sourceMappingURL=skipper.js.map
