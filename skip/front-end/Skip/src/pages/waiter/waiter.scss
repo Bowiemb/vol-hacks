@@ -1,3 +1,29 @@
 page-waiter {
 
+   ion-content {
+     background-image: url("../assets/imgs/background.png");
+     background-size:     cover;
+     background-repeat:   no-repeat;
+     background-position: center center;
+   }
+
+   ion-title {
+     text-align: center;
+   }
+
+   .waiter-subtitle {
+      text-align: left;
+      font-size: 1.3em;
+      color: #fff;
+      margin-left: 30%;
+      margin-top: 1%;
+      margin-bottom: 1%;
+   }
+
+   .restaurant-list {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+   }
 }
