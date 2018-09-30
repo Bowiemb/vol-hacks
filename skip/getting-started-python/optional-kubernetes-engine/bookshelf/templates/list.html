@@ -18,7 +18,7 @@
 
 {% block content %}
 
-<h3>Books</h3>
+<h3>Waiters</h3>
 <a href="/books/add" class="btn btn-success btn-sm">
   <i class="glyphicon glyphicon-plus"></i>
   Add book
@@ -26,7 +26,7 @@
 
 {% for book in books %}
 <div class="media">
-<!--
+
   <a href="/books/{{book.id}}">
     <div class="media-left">
       {% if book.imageUrl %}
@@ -35,10 +35,10 @@
         <img src="http://placekitten.com/g/128/192">
       {% endif %}
     </div>
-    -->
+   
     <div class="media-body">
-      <h4>{{book.fname}}</h4>
-      <p>{{book.lname}}</p>
+      <h4>{{ book.fname }}</h4>
+      <p>{{ book.lname }}</p>
     </div>
   </a>
 </div>
