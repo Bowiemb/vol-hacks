@@ -1,0 +1,52 @@
+page-home {
+
+  ion-content {
+    background-image: url("../assets/imgs/background.jpg");
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+  }
+  .overlay {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+  .app-title {
+    font-size:1.8em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .userInfo {
+    display: block;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .submitButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .waitButton {
+    background-color: rgb(255, 89, 89);
+    color: white;
+  }
+
+  .waitButton:hover:not(.active) {
+    background-color: red;
+  }
+
+  .skipButton:hover:not(.active) {
+    background-color: rgb(22, 105, 249);
+  }
+}
