@@ -84,7 +84,7 @@ def view(id):
 @crud.route('/add', methods=['GET', 'POST'])
 def add():
     if request.method == 'POST':
-        data = request.form.to_dict(flat=True)
+        data = request.get_json()
 
         # If an image was uploaded, update the data to point to the new image.
         image_url = upload_image_file(request.files.get('image'))

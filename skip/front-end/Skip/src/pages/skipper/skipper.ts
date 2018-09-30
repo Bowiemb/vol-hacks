@@ -16,11 +16,16 @@ export class SkipperPage {
   }
   
   addOne(id) {
+<<<<<<< HEAD
     console.log(id);
     let button = (<HTMLInputElement>document.getElementById(id));
     console.log(button);
     
     let val = Number(button.value);
+=======
+    let button = <HTMLInputDocument>document.getElementById(id);
+    let val = +button.value;
+>>>>>>> 8c87b3fab0b81e8c9f26605bae03bcf876f5f91a
     val += 1;
     console.log(val);
     button.value = String(val);
@@ -28,9 +33,15 @@ export class SkipperPage {
    }
 
   removeOne(id) {
+<<<<<<< HEAD
     if (Number((<HTMLInputElement>document.getElementById(id)).value) > 0) {
       let button = (<HTMLInputElement>document.getElementById(id));
       let val = Number(button.value);
+=======
+    if (+document.getElementById(id).value > 0) {
+      let button = <HTMLInputDocument>document.getElementById(id);
+      let val = +button.value;
+>>>>>>> 8c87b3fab0b81e8c9f26605bae03bcf876f5f91a
       val -= 1;
       console.log(val);
       button.value = String(val);

@@ -23,11 +23,11 @@
 <div class="btn-group">
   <a href="/books/{{book.id}}/edit" class="btn btn-primary btn-sm">
     <i class="glyphicon glyphicon-edit"></i>
-    Edit book
+    Edit waiter
   </a>
   <a href="/books/{{book.id}}/delete" class="btn btn-danger btn-sm">
     <i class="glyphicon glyphicon-trash"></i>
-    Delete book
+    Delete waiter
   </a>
 </div>
 
@@ -41,12 +41,12 @@
   </div>
   <div class="media-body">
     <h4 class="book-title">
-      {{book.title}}
-      <small>{{book.publishedDate}}</small>
+      {{book.fname}}
+      <small>{{book.lname}}</small>
     </h4>
-    <h5 class="book-author">By {{book.author|default('Unknown', True)}}</h5>
-    <p class="book-description">{{book.description}}</p>
-    <small class="book-added-by">Added by {{book.createdBy|default('Anonymous', True)}}</small>
+    <h5 class="book-author">By {{book.time|default('Unknown', True)}}</h5>
+    <p class="book-description">{{book.fname}}</p>
+    <small class="book-added-by">Added by {{book.lname|default('Anonymous', True)}}</small>
   </div>
 </div>
 
