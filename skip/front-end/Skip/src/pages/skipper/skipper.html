@@ -22,37 +22,37 @@
   <hr>
 
   <div class="itemsContainer">
-    <div class="item1">
-      <button id="removeQuantity" (click)="removeOne('quantity')"> <ion-icon name="remove-circle"></ion-icon> </button>
-      <button id="quantity" ion-button color="light" disabled> 0 </button>
-      <button id="addQuantity" (click)="addOne('quantity')"> <ion-icon name="add-circle"></ion-icon> </button>
-    </div>
+     <div class="item1">
+       <button id="removeQuantity" (click)="removeOne('quantity')"> <ion-icon name="remove-circle"></ion-icon> </button>
+       <button id="quantity" ion-button color="light" disabled> 0 </button>
+       <button id="addQuantity" (click)="addOne('quantity')"> <ion-icon name="add-circle"></ion-icon> </button>
+     </div>
 
-    <div class="item2"> <h3>Chicken Biscuit</h3> </div>
-    <div class="item3"> <h3>$2.19</h3> </div>
-  </div>
+     <div class="item2"> <h3>Chicken Biscuit</h3> </div>
+     <div class="item3"> <h3>$2.19</h3> </div>
+   </div>
 
-  <hr>
+   <hr>
 
-  <div class="itemsContainer">
-    <div class="item1">
-      <button (click)="removeOne('quantity1')"> <ion-icon name="remove-circle"></ion-icon> </button>
-      <button id="quantity1" ion-button color="light" disabled> 0 </button>
-      <button (click)="addOne('quantity1')"> <ion-icon name="add-circle"></ion-icon> </button>
-    </div>
+   <div class="itemsContainer">
+     <div class="item1">
+       <button (click)="removeOne('quantity1')"> <ion-icon name="remove-circle"></ion-icon> </button>
+       <button id="quantity1" ion-button color="light" disabled> 0 </button>
+       <button (click)="addOne('quantity1')"> <ion-icon name="add-circle"></ion-icon> </button>
+     </div>
 
-    <div class="item2"> <h3>Chicken Sandwich</h3> </div>
-    <div class="item3"> <h3>$3.05</h3> </div>
-  </div>
+     <div class="item2"> <h3>Chicken Sandwich</h3> </div>
+     <div class="item3"> <h3>$3.05</h3> </div>
+   </div>
 
-</ion-content>
+ </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <div class="itemsContainer">
-      <ion-title class="item1">Total:</ion-title>
-      <h2 class="item2"> $0.00 </h2>
-      <button ion-button color="secondary" class="item3"> Continue! </button>
-    </div>
-  </ion-toolbar>
-</ion-footer>
+ <ion-footer>
+   <ion-toolbar>
+     <div class="itemsContainer">
+       <ion-title class="item1">Total:</ion-title>
+       <h2 id="total" class="item2"> $0.00 </h2>
+       <button ion-button color="secondary" class="item3"> Continue! </button>
+     </div>
+   </ion-toolbar>
+ </ion-footer>
