@@ -1,0 +1,6 @@
+name
+ObiWan
+Luke
+Leia
+Yoda
+R2
