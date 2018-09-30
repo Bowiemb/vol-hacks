@@ -1,0 +1,25 @@
+<ion-title>
+  <div class="app-title">Skip</div>
+</ion-title>
+
+
+<ion-content padding>
+<div class="overlay">
+  <ion-list class="userInfo">
+    <ion-item>
+      <ion-input type="text" placeholder="First Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Last Name"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div class="submitButtons">
+    <button ion-button (click)='pushSkipperPage()' class="skipButton" >Skipper</button>
+    <button ion-button (click)='pushWaiterPage()' class="waitButton">Waiter</button>
+  </div>
+</div>
+
+</ion-content>
