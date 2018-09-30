@@ -1,0 +1,7 @@
+{
+  "name": "Skip",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
