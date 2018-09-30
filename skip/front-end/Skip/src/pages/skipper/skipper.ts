@@ -37,21 +37,22 @@ export class SkipperPage {
        button2.value = String(val2);
        button2.innerHTML = String(val2);
      }
-    val += 1;
-    console.log(val);
-    button.value = String(val);
-    button.innerHTML = String(val);
+    // val += 1;
+    // console.log(val);
+    // button.value = String(val);
+    // button.innerHTML = String(val);
    }
 
-  removeOne(id) {
-    if (Number((<HTMLInputElement>document.getElementById(id)).value) > 0) {
-      let button = (<HTMLInputElement>document.getElementById(id));
-      let val = Number(button.value);
-      val -= 1;
-      console.log(val);
-      button.value = String(val);
-      button.innerHTML = String(val);
-    }
+//   removeOne(id) {
+//     if (Number((<HTMLInputElement>document.getElementById(id)).value) > 0) {
+//       let button = (<HTMLInputElement>document.getElementById(id));
+//       let val = Number(button.value);
+//       val -= 1;
+//       console.log(val);
+//       button.value = String(val);
+//       button.innerHTML = String(val);
+//     }
+// }
 
     removeOne(id) {
       if (Number((<HTMLInputElement>document.getElementById(id)).value) > 0) {
