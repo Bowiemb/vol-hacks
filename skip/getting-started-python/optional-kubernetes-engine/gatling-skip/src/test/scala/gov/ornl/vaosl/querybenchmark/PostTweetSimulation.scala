@@ -28,20 +28,20 @@ object TweetConf extends LazyLogging {
 
 
 object PostTweet {
-
+/*
   val template: Session => Validation[Map[String,String]]  = (session: Session) =>
     for {
       handle <- session("handle").validate[String]
       tweet <- session("content").validate[String]
     } yield Map("tweet[handle]" -> handle, "tweet[content]" -> tweet)
-
-  val feeder: RecordSeqFeederBuilder[Any] = jsonFile("tweets.json").random
+*/
+//  val feeder: RecordSeqFeederBuilder[Any] = jsonFile("tweets.json").random
 
   val post: ChainBuilder =
     exec(
       http("Search")
-        .post("")
-        .formParamMap(template)
+        .post("books/add")
+        .body(StringBody("""{ "fname": "Michael", "lname": "Bowie" }""")).asJSON
     )
 }
 
@@ -52,14 +52,14 @@ class PostTweetSimulation extends Simulation {
 
   val httpConf: HttpProtocolBuilder = http
     .baseURL(endpoint) // Here is the root for all relative URLs
-    .contentTypeHeader("application/x-www-form-urlencoded")
+    .contentTypeHeader("application/json")
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8") // Here are the common headers
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
 
   val scn: ScenarioBuilder = scenario("Random Tweet Scenario")
-    .feed(PostTweet.feeder)
+  //  .feed(PostTweet.feeder)
     .exec(PostTweet.post)
 
   setUp(scn.inject(rampUsers(maxUsers) over duration).protocols(httpConf))
