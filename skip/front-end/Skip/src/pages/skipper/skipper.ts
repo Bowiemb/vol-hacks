@@ -16,7 +16,7 @@ export class SkipperPage {
   }
 
   addOne(id) {
-    let button = document.getElementById(id);
+    let button = <HTMLInputDocument>document.getElementById(id);
     let val = +button.value;
     val += 1;
     console.log(val);
@@ -26,7 +26,7 @@ export class SkipperPage {
 
   removeOne(id) {
     if (+document.getElementById(id).value > 0) {
-      let button = document.getElementById(id);
+      let button = <HTMLInputDocument>document.getElementById(id);
       let val = +button.value;
       val -= 1;
       console.log(val);
